@@ -9,9 +9,9 @@
     .user_card {
         height: 400px;
         width: 350px;
-        margin-top: 30px;
+        margin-top: 90px;
         margin-bottom: 10px;
-        background: #fafafa;
+        background: #c0c0c0;
         position: relative;
         display: flex;
         justify-content: center;
@@ -29,7 +29,7 @@
         width: 170px;
         top: -75px;
         border-radius: 50%;
-        background: #000000;
+        background: #ffffff;
         padding: 10px;
         text-align: center;
     }
@@ -67,4 +67,22 @@
     }
     .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
         background-color: #000000 !important;
+    }
+
+
+    .brand_logo_container {
+        position: absolute;
+        height: 170px;
+        width: 170px;
+        top: -75px;
+        border-radius: 50%;
+        background: #ffffff;
+        padding: 10px;
+        text-align: center;
+    }
+    .brand_logo {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 2px solid white;
     }

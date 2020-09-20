@@ -22,12 +22,9 @@ export class PlaceordersComponent implements OnInit {
   {
     this.arr.push(a)
   }
-
-  placeorder(orderData){
-    
+thankyouData;
+  placeorder(orderData){   
     this.porder.placeorder(orderData)
-    //.subscribe(response=>{console.log(response)})
-    this.router.navigate(['/thankyou'])
   }
 
 }

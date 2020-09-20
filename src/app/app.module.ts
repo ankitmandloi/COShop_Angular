@@ -54,7 +54,8 @@ import {  HttpClientModule } from '@angular/common/http';
     AuthService,
     RegisterService,
     PlaceorderService,
-    HttpClientModule
+    HttpClientModule,
+    PlaceordersComponent
   ],
   bootstrap: [AppComponent]
 })

@@ -1,28 +1,29 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlaceorderService {
 
-  constructor(private http:HttpClient) { }
-
+  constructor(private http:HttpClient,private router:Router) { }
+thankyouData
   placeorder(orderData)
   {
 
-     return this.http.post("https://my-json-server.typicode.com/ankitmandloi/fakeplaceHolder/users/", {
+     return this.http.post(' https://my-json-server.typicode.com/ankitmandloi/fakeplaceHolder/users ', {
     method: 'POST',
-    body: JSON.stringify({
-      title: 'foo',
-      body: 'bar',
-      userId: 1
-    }),
+    body: JSON.stringify(orderData),
     headers: {
       "Content-type": "application/json; charset=UTF-8"
     }
-  }) 
- 
+  }).subscribe(response=>{
+    this.thankyouData=response
+    this.router.navigate(['/thankyou']) 
+  })
+
+   
 
 
 
