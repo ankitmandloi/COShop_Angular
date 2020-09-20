@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+ <a routerLink="/aboutproduct" ><img src="https://coarchitects.com/wp-content/uploads/2014/05/cropped-2015_CO_logo.jpg" alt="HTML tutorial" style="width:50px;height:50px;border-radius:50%"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/login">Login <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)='logout()'>Logout</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/placeorder">PlaceOrder</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/vieworders">ViewOrders</a>
+          </li>  
+      </ul>
+    </div>
+  </nav>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">

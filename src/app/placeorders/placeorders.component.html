@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  <h2><b>Place Order:- </b></h2>
+    <div class="container h-100">
+      <div class="d-flex justify-content-center h-100">
+          <div class="user_card">
+              <form #f="ngForm"  (ngSubmit)=placeorder(f.value) >
+                <div class="user_card_address">
+                  <label for="exampleInputPassword1"><b>Gift Card Amount :</b></label>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="rupya" aria-describedby="amount" placeholder="Rupees" style="float:left;width:100px;margin-right: 10px;"
+                     ngModel name="rupya" #rupya="ngModel" class="form-control input_user" (change)=appen(rupya)>
+
+                    <input type="text" class="form-control" id="paisa" aria-describedby="amount" placeholder="Paise" style=" width:100px;margin-right: 10px;"
+                     ngModel name="paisa" #paisa="ngModel"  (change)=appen(paisa)>
+                  </div>
+
+                  <label for="exampleInputPassword1"><b>Recipient Name:</b></label>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="fname" aria-describedby="fname" placeholder="FirstName" style="float:left;width:150px;margin-right: 10px;" 
+                    ngModel name="firstname" #firstname="ngModel"  (change)=appen(firstname)>
+
+                    <input type="text" class="form-control" id="lname" aria-describedby="lname" placeholder="LastName" style=" width:150px;margin-right: 10px;"
+                    ngModel name="lastname" #lastname="ngModel"  (change)=appen(lastname)>
+                  </div>
+                  <label for="exampleInputPassword1"><b>Address of Recipient:</b></label>
+                  
+                      <div class="form-group">
+                          <input type="text" class="form-control" id="address" aria-describedby="address" placeholder="Address" style="float:left;width:420px;margin: 10px;"
+                          ngModel name="address" #address="ngModel"  (change)=appen(address)>
+                          <input type="text" class="form-control" id="city" aria-describedby="city" placeholder="City" style="float:left;width:200px;margin: 10px;"
+                          ngModel name="city" #city="ngModel"  (change)=appen(city)>
+                          <input type="text" class="form-control" id="state" aria-describedby="state" placeholder="State" style="float:left;width:200px;margin: 10px;"
+                          ngModel name="state" #state="ngModel"  (change)=appen(state)>
+                          <input type="text" class="form-control" id="pinCode" aria-describedby="pinCode" placeholder="PIN CODE" style="float:left;width:200px;margin: 10px;"
+                          ngModel name="pin" #pin="ngModel"  (change)=appen(pin)>
+                          <input type="text" class="form-control" id="country" aria-describedby="country" placeholder="Country" style="float:left;width:200px;margin: 10px;"
+                          ngModel name="country" #country="ngModel"  (change)=appen(country)>   
+                        </div>
+                  </div>
+                  <div class="user_card_address">
+                  <label for="exampleInputPassword1"><b>Buyer's Name:</b></label>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="fname" aria-describedby="fname" placeholder="FirstName" style="float:left;width:150px;margin-right: 10px;"
+                    ngModel name="buyerfname" #buyerfname="ngModel"  (change)=appen(buyerfname)>
+                    <input type="text" class="form-control" id="lname" aria-describedby="lname" placeholder="LastName" style=" width:150px;margin-right: 10px;"
+                    ngModel name="buyerlname" #buyerlname="ngModel"  (change)=appen(buyerlname)>
+                  </div>
+                  <label for="exampleInputPassword1"><b>Phone Number:</b></label>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="CC" aria-describedby="CountryCode" placeholder="CC" style="float:left;width:60px;margin-right: 10px;"
+                    ngModel name="countrycode" #countrycode="ngModel"  (change)=appen(countrycode)>
+                    <input type="text" class="form-control" id="Number"  style="float:left;width:100px;"
+                    ngModel name="ph" #ph="ngModel"  (change)=appen(ph)>
+                  </div><br>
+                  <label for="exampleInputPassword1"><b>Email:</b></label>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="email" aria-describedby="email" placeholder="Email" style="float:left;width:300px;margin-right: 10px;"
+                    ngModel name="email" #email="ngModel"  (change)=appen(email)> 
+                  </div>
+                  <br>
+                  </div>
+                  <br>
+                  <button type="submit" class="btn btn-dark">Submit</button>
+                </form>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
