@@ -14,7 +14,8 @@ export class ViewordersComponent implements OnInit {
     
     if(currentUser && currentUser.length!=4)
     { 
-      http.get("https://my-json-server.typicode.com/ankitmandloi/fakeplaceHolder/users?id="+currentUser.charAt(7)).subscribe(response=>{
+      http.get("https://my-json-server.typicode.com/ankitmandloi/fakeplaceHolder/users?id="+currentUser.charAt(7))
+        .subscribe(response=>{
         console.log(response);
       })
     }

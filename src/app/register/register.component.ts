@@ -22,10 +22,10 @@ export class RegisterComponent implements OnInit {
   register()
   {
     this.registerData={"name":this.arr[0].viewModel,"email":this.arr[1].viewModel,"password":this.arr[2].viewModel,"confirmpassword":this.arr[3].viewModel}
-    this.reg.register(this.registerData).subscribe(
-                      result=>{
-                                console.log(result)
-                               })
+    this.reg.register(this.registerData)
+    .subscribe(result=>{
+                        console.log(result)
+                        })
     this.router.navigate(['/login'])
   }
 }

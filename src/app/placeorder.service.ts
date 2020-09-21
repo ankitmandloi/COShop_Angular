@@ -23,13 +23,6 @@ thankyouData
     this.router.navigate(['/thankyou']) 
   })
 
-   
-
-
-
-
-
-
       
   }
 
