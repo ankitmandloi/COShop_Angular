@@ -8,16 +8,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./vieworders.component.css']
 })
 export class ViewordersComponent implements OnInit {
-
+respo;
   constructor(  http: HttpClient, private router:Router) { 
     var currentUser= localStorage.getItem('token');
-    
+    var urrentUser=currentUser.substring(1)
+    var urrentUse=urrentUser.slice(0,-1);
+    var json1= JSON.parse(urrentUse);
+  
     if(currentUser && currentUser.length!=4)
     { 
-      http.get("https://my-json-server.typicode.com/ankitmandloi/fakeplaceHolder/users?id="+currentUser.charAt(7))
-        .subscribe(response=>{
-        console.log(response);
-      })
+      
+      http.get('https://localhost:44369/students/vieworders?username='+json1.username).subscribe
+      (res=>{
+       this.respo=res;
+      }
+      )
+      
     }
     else{
       this.router.navigate(['/login'])

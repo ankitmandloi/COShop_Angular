@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   isLoggedIn=false;
   constructor(private authService: AuthService, private router: Router) { 
- 
+    this.isLoggedIn
     var token=localStorage.getItem('token')
     if(token!=null){
     if(token.length>4)
@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit {
 
   }
   ngOnInit(): void {
-
+    this.isLoggedIn=false;
     var token=localStorage.getItem('token')
     if(token!=null){
     if(token.length>4)

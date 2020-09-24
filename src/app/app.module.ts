@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { RegisterService } from './register.service';
 import { PlaceorderService } from './placeorder.service';
 import {  HttpClientModule } from '@angular/common/http';
+import { ContactUsService } from './contact-us.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {  HttpClientModule } from '@angular/common/http';
     FooterComponent
   ],
   imports: [
-    BrowserModule,
+ 
+  BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
@@ -46,7 +48,8 @@ import {  HttpClientModule } from '@angular/common/http';
       {path:'register', component: RegisterComponent},
       {path:'placeorder', component: PlaceordersComponent},
       {path:'vieworders', component: ViewordersComponent},
-      {path:'thankyou', component: ThankyoupageComponent}
+      {path:'thankyou', component: ThankyoupageComponent},
+      {path:'contactus', component: ContactusComponent}
     ])
 
   ],
@@ -55,7 +58,8 @@ import {  HttpClientModule } from '@angular/common/http';
     RegisterService,
     PlaceorderService,
     HttpClientModule,
-    PlaceordersComponent
+    PlaceordersComponent,
+    ContactUsService
   ],
   bootstrap: [AppComponent]
 })

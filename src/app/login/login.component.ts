@@ -25,15 +25,14 @@ arr=[];
   invalidLogin: boolean;
   login()
   {
-    this.authService.login(this.arr[0].viewModel,this.arr[1].viewModel).subscribe(
+     this.authService.login(this.arr[0].viewModel,this.arr[1].viewModel)
+    .subscribe(
       result=>{
          
-        if(result)
-        {  
-
+        if(result )
+        {
           localStorage.setItem('token',JSON.stringify(result)) 
           localStorage.setItem('currentUser',JSON.stringify(result) )
-
           this.router.navigate(['/placeorder'])
         }
         else

@@ -21,11 +21,8 @@ export class RegisterComponent implements OnInit {
   registerData: Object;
   register()
   {
-    this.registerData={"name":this.arr[0].viewModel,"email":this.arr[1].viewModel,"password":this.arr[2].viewModel,"confirmpassword":this.arr[3].viewModel}
-    this.reg.register(this.registerData)
-    .subscribe(result=>{
-                        console.log(result)
-                        })
+    this.registerData={"Username":this.arr[0].viewModel,"Email":this.arr[1].viewModel,"Password":this.arr[2].viewModel,"Confirmpassword":this.arr[3].viewModel}
+    this.reg.register(this.registerData).subscribe()
     this.router.navigate(['/login'])
   }
 }

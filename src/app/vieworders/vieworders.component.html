@@ -22,7 +22,28 @@
 					<div class="brand_logo_container">
 						<img src="https://ciie.co/img/GIF_CO.gif" class="brand_logo" alt="Logo">
 					</div>
-                </div>	
+				</div>
+
+				<table class="table ">
+					<thead class="thead-dark">
+						<tr>
+						  <th>Buyer's </th>
+						  <th>Card to </th>
+						  <th>Amount</th>
+						  <th>At</th>
+						</tr>
+					</thead>
+					<tbody class="tbody-light">
+					  <tr *ngFor="let resp of respo">
+						<td>{{ resp.buyerfname }}</td>
+						<td>{{ resp.firstname }}</td>
+						<td>{{ resp.rupya }}</td>
+						<td>{{ resp.address }}</td>
+					  </tr>
+					</tbody>
+				  </table>
+				
+				
 			</div>
 		</div>
 	</div>

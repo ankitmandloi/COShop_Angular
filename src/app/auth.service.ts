@@ -11,9 +11,9 @@ export class AuthService {
 cred:Object;
 query: String;
   login(username,password)
-  {
-    this.cred= {"username": username ,"password":password}
-    return this.http.get('https://my-json-server.typicode.com/ankitmandloi/fakeplaceHolder/users?id='+username+'&&name='+password);      
+  {//https://localhost:44369/students/login?uname=anshul&&pass=ankit
+    this.cred= {"username": username ,"email":password}
+    return this.http.get('https://localhost:44369/students/login?uname='+username+'&&pass='+password)       
   }
 
   logout()

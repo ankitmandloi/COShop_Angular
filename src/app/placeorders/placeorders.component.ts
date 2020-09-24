@@ -23,8 +23,11 @@ export class PlaceordersComponent implements OnInit {
     this.arr.push(a)
   }
 thankyouData;
-  placeorder(orderData){   
+
+  placeorder(orderData)
+  {  
     this.porder.placeorder(orderData)
+    this.router.navigate(['/thankyou'])
   }
 
 }
@@ -44,3 +47,6 @@ thankyouData;
 // this.arr[11].viewModel,
 // this.arr[12].viewModel,
 // this.arr[13].viewModel
+
+
+
